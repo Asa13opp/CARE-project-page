@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CARE learns context-adaptive rubrics for empathetic reinforcement learning, evolving support priorities with the dialogue state.">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Evolving Support Priorities in Empathetic Reinforcement Learning">
+  <meta property="og:description" content="Context-Adaptive Rubric Evolution (CARE) for empathetic reinforcement learning.">
+  <meta name="citation_title" content="Evolving Support Priorities in Empathetic Reinforcement Learning">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_pdf_url" content="https://arxiv.org/pdf/2609.34249">
+  <meta name="theme-color" content="#ffffff">
+  <title>CARE | Evolving Support Priorities in Empathetic Reinforcement Learning</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="static/css/project.css">
+</head>
+<body>
+<main>
+  <section class="hero publication-header">
+    <div class="hero-body">
+      <div class="container is-max-desktop has-text-centered">
+        <h1 class="title is-1 publication-title">Evolving Support Priorities in<br class="desktop-break"> Empathetic Reinforcement Learning</h1>
+        <p class="project-name">CARE · Context-Adaptive Rubric Evolution</p>
+        <div class="is-size-5 publication-authors">
+          <span class="author-block">Pengyu Huang,</span><span class="author-block">Zhiyuan Han,</span><span class="author-block">Wenwen Tong,</span><span class="author-block">Hewei Guo,</span><span class="author-block">Jiangnan Chen,</span><br class="author-break"><span class="author-block">Sirui Chen,</span><span class="author-block">Lewei Lu,</span><span class="author-block">Beier Zhu,</span><span class="author-block">Xun Yang</span>
+        </div>
+        <div class="publication-links">
+          <span class="link-block"><a href="https://arxiv.org/abs/2609.34249" target="_blank" rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6zM14 3v5h4M9 12h6M9 16h6"/></svg></span><span>Paper</span></a></span>
+          <span class="link-block"><a href="https://github.com/Asa13opp/CARE" target="_blank" rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m8 6-6 6 6 6m8-12 6 6-6 6m-3-15-2 18"/></svg></span><span>Code</span></a></span>
+          <span class="link-block"><a href="https://huggingface.co/collections/0tishuang/care" target="_blank" rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark"><span class="icon" aria-hidden="true">🤗</span><span>Models</span></a></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop"><div class="hero-body">
+      <figure class="paper-figure">
+        <a href="static/images/overview.png" target="_blank" rel="noopener" aria-label="Open Figure 1 at full resolution"><img src="static/images/overview.png" width="1662" height="875" alt="Figure 1: Support needs shift from reassurance to clarification and mobilization; CARE adapts empathy priorities and improves performance across benchmarks."></a>
+        <figcaption class="subtitle has-text-centered"><strong>Support priorities evolve with the conversation.</strong> CARE learns what to reward at each turn.</figcaption>
+      </figure>
+    </div></div>
+  </section>
+
+  <section class="section hero is-light" id="abstract">
+    <div class="container is-max-desktop"><div class="columns is-centered"><div class="column is-four-fifths">
+      <h2 class="title is-3 has-text-centered">Abstract</h2>
+      <div class="content has-text-justified">
+        <p>We identify a fundamental mismatch in empathetic reinforcement learning: support priorities evolve with the dialogue state, yet existing methods typically optimize predefined reward specifications that remain fixed across turns. To model these evolving support priorities, we organize empathetic support along cognitive, affective, and proactive empathy, and propose <strong>Context-Adaptive Rubric Evolution (CARE)</strong>. At each turn, CARE generates a context-adaptive rubric by adjusting both the weights of these three empathy dimensions and their fine-grained evaluation criteria. The rubric generator is trained with turn-level rubric supervision and human preference data through supervised fine-tuning followed by preference-based reinforcement learning, and then serves as an adaptive reward interface for online empathetic RL. Integrated with both RLVER and MICA, CARE achieves state-of-the-art performance across SentientBench, EQBench3, and EMPA under three independent LLM judges. Notably, on EMPA, CARE improves EPM-Idx over the strongest baseline by at least 13 points under all three judges, including an increase from 28.11 to 83.54 under Gemini-2.5-Pro. Further analyses show that learned rubric priorities systematically vary across dialogue stages and user emotions, demonstrating that CARE adapts what is rewarded as support needs evolve.</p>
+      </div>
+    </div></div></div>
+  </section>
+
+  <section class="section" id="method">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Method</h2>
+      <figure class="paper-figure">
+        <a href="static/images/method.png" target="_blank" rel="noopener" aria-label="Open Figure 2 at full resolution"><img src="static/images/method.png" width="1662" height="845" loading="lazy" alt="Figure 2: Rubric generator training with SFT and preference RL, followed by online dialogue RL with adaptive rubrics."></a>
+        <figcaption><strong>Figure 2.</strong> Turn-level supervision and human response preferences train a context-conditioned rubric generator. The frozen generator supplies adaptive evaluation criteria for online dialogue RL.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section hero is-light" id="results">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Results</h2>
+      <figure class="paper-figure">
+        <a href="static/images/main-results.png" target="_blank" rel="noopener" aria-label="Open Table 1 at full resolution"><img src="static/images/main-results.png" width="1662" height="1220" loading="lazy" alt="Table 1: Main comparison across SentientBench, EQBench3, and EMPA, evaluated by DeepSeek-V4-Pro, Gemini-2.5-Pro, and GPT-5.5."></a>
+        <figcaption><strong>Table 1.</strong> Main comparison across SentientBench, EQBench3, and EMPA under three independent LLM judges. Standard deviations are computed over three random seeds; bold and underline mark the best and second-best results.</figcaption>
+      </figure>
+      <figure class="paper-figure">
+        <a href="static/images/scaling-results.png" target="_blank" rel="noopener" aria-label="Open Table 2 at full resolution"><img src="static/images/scaling-results.png" width="1662" height="683" loading="lazy" alt="Table 2: Scaling and frontier-model comparison on EQBench3 under DeepSeek-V4-Pro, including Qwen3 models from 8B to 32B."></a>
+        <figcaption><strong>Table 2.</strong> Scaling and frontier comparison on EQBench3 under DeepSeek-V4-Pro. CARE improves Qwen3 models from 8B to 32B.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section" id="analysis">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Ablations &amp; Analysis</h2>
+      <figure class="paper-figure">
+        <a href="static/images/ablations.png" target="_blank" rel="noopener" aria-label="Open Tables 3 and 4 at full resolution"><img src="static/images/ablations.png" width="1662" height="312" loading="lazy" alt="Tables 3 and 4: Ablations of rubric design and rubric-generator training; the full CARE rubric and full training reward perform best."></a>
+        <figcaption><strong>Tables 3 &amp; 4.</strong> Ablations of rubric design for policy optimization (left) and generator training for preference recovery (right).</figcaption>
+      </figure>
+      <figure class="paper-figure">
+        <a href="static/images/rubric-analysis.png" target="_blank" rel="noopener" aria-label="Open Figures 3 and 4 at full resolution"><img src="static/images/rubric-analysis.png" width="1662" height="545" loading="lazy" alt="Figures 3 and 4: Learned empathy weights vary across dialogue turns and user emotions after preference RL."></a>
+        <figcaption><strong>Figures 3 &amp; 4.</strong> Mean empathy weights across dialogue turns (left) and dominant rubric dimensions conditioned on user emotion (right), comparing SFT and preference-RL generators.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section hero is-light" id="case-studies">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Case Studies</h2>
+      <figure class="paper-figure">
+        <a href="static/images/case-cognitive.png" target="_blank" rel="noopener" aria-label="Open the cognitive-empathy case from Appendix C at full resolution"><img src="static/images/case-cognitive.png" width="2105" height="1272" loading="lazy" alt="Appendix C, Figure 6: Dialogue history, generated rubric, and evaluated response for a cognitive-empathy-dominant relationship-conflict case. Empathy weights are cognitive 0.40, affective 0.35, and proactive 0.25."></a>
+        <figcaption><strong>Figure 6 · Cognitive empathy.</strong> A relationship conflict calls for understanding and reframing. CARE prioritizes cognitive empathy (0.40), followed by affective (0.35) and proactive (0.25) empathy.</figcaption>
+      </figure>
+      <figure class="paper-figure">
+        <a href="static/images/case-affective.png" target="_blank" rel="noopener" aria-label="Open the affective-empathy case from Appendix C at full resolution"><img src="static/images/case-affective.png" width="2105" height="1266" loading="lazy" alt="Appendix C, Figure 7: Dialogue history, generated rubric, and evaluated response for an affective-empathy-dominant parental-guilt case. Empathy weights are cognitive 0.30, affective 0.45, and proactive 0.25."></a>
+        <figcaption><strong>Figure 7 · Affective empathy.</strong> A parent interprets a son's withdrawal as personal failure. CARE prioritizes emotional validation and safety, assigning affective empathy the largest weight (0.45).</figcaption>
+      </figure>
+      <figure class="paper-figure">
+        <a href="static/images/case-proactive.png" target="_blank" rel="noopener" aria-label="Open the proactive-empathy case from Appendix C at full resolution"><img src="static/images/case-proactive.png" width="2105" height="1266" loading="lazy" alt="Appendix C, Figure 8: Dialogue history, generated rubric, and evaluated response for a proactive-empathy-dominant family-burden case involving a leaking pipe. Empathy weights are cognitive 0.30, affective 0.25, and proactive 0.45."></a>
+        <figcaption><strong>Figure 8 · Proactive empathy.</strong> A practical family problem calls for concrete support and user agency. CARE assigns proactive empathy the largest weight (0.45), while retaining cognitive (0.30) and affective (0.25) support.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section" id="bibtex">
+    <div class="container is-max-desktop">
+      <div class="bibtex-header"><h2 class="title is-4">BibTeX</h2><button class="copy-bibtex-btn" id="copy-bibtex" type="button"><span class="copy-text" aria-live="polite">Copy</span></button></div>
+      <pre><code id="bibtex-code">@misc{huang2026evolving,
+  title         = {Evolving Support Priorities in Empathetic Reinforcement Learning},
+  author        = {Huang, Pengyu and Han, Zhiyuan and Tong, Wenwen and Guo, Hewei and Chen, Jiangnan and Chen, Sirui and Lu, Lewei and Zhu, Beier and Yang, Xun},
+  year          = {2026},
+  eprint        = {2609.34249},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.AI}
+}</code></pre>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="container is-max-desktop has-text-centered">
+    <p class="contact">Contact: <a href="mailto:otishuang@163.com">otishuang@163.com</a></p>
+    <p class="template-credit">Built with the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" rel="noopener">Academic Project Page Template</a>, adapted from <a href="https://nerfies.github.io/" target="_blank" rel="noopener">Nerfies</a>.<br>Website template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>.</p>
+  </div>
+</footer>
+<script>
+  document.querySelector('#copy-bibtex').addEventListener('click', async function () {
+    const text = document.querySelector('#bibtex-code');
+    const label = this.querySelector('.copy-text');
+    try {
+      await navigator.clipboard.writeText(text.textContent);
+      label.textContent = 'Copied!';
+      setTimeout(() => { label.textContent = 'Copy'; }, 2000);
+    } catch {
+      const range = document.createRange();
+      range.selectNodeContents(text);
+      const selection = window.getSelection();
+      selection.removeAllRanges();
+      selection.addRange(range);
+      label.textContent = 'Text selected';
+    }
+  });
+</script>
+</body>
+</html>

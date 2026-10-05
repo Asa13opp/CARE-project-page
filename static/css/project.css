@@ -1,0 +1,41 @@
+/* CARE content adjustments to the Academic Project Page Template. */
+.publication-header .hero-body { padding: 4.5rem 1.5rem 1.5rem; }
+.publication-title { font-size: clamp(2rem, 4vw, 3rem) !important; letter-spacing: -.035em; }
+.project-name { margin: -.75rem 0 1.5rem; color: var(--text-secondary); font-size: 1.1rem; }
+.publication-authors { line-height: 1.9; }
+.author-block { color: var(--primary-color); font-size: 1.08rem; }
+.publication-links { display: flex; flex-wrap: wrap; justify-content: center; gap: .5rem; }
+.link-block a { margin: 0; }
+.publication-links .button { border-radius: 999px !important; }
+.icon svg { width: 19px; height: 19px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.teaser .hero-body { padding: 1.5rem 1.5rem 3rem; }
+.section { padding: 3.5rem 1.5rem; }
+.paper-figure { margin: 0; }
+.paper-figure + .paper-figure { margin-top: 3rem; }
+.paper-figure > a { display: block; }
+.paper-figure img { width: 100%; height: auto; display: block; background: #fff; }
+.paper-figure figcaption { margin-top: 1.25rem; font-size: .98rem; line-height: 1.65; color: var(--text-secondary); text-align: center; }
+.teaser .subtitle { font-size: 1.1rem; }
+.content.has-text-justified { text-align: left !important; font-size: 1.05rem; }
+.bibtex-header .title { margin-bottom: 0; }
+#bibtex-code { font-size: .82rem; }
+.footer { padding: 2.5rem 1.5rem; }
+.contact { margin-bottom: 1rem; }
+.template-credit { font-size: .82rem; color: var(--text-secondary); }
+@media (max-width: 768px) {
+  .publication-header .hero-body { padding: 3rem 1rem 1rem; }
+  .publication-title { font-size: 2.1rem !important; }
+  .desktop-break { display: none; }
+  .author-break { display: none; }
+  .project-name { font-size: 1rem; margin-top: 0; }
+  .author-block { font-size: .98rem; }
+  .teaser .hero-body { padding: 1.25rem 1rem 2.5rem; }
+  .section { padding: 2.75rem 1rem; }
+  .paper-figure figcaption { font-size: .9rem; }
+  .publication-links .link-block { display: inline-block; margin: 0; }
+  .publication-links .button { width: auto; margin: 0 !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .hero, .section { animation: none; }
+}

@@ -1,0 +1,143 @@
+[
+  {
+    "file": "static/images/overview.png",
+    "source_page": 2,
+    "crop_points": [
+      106,
+      80,
+      505,
+      290
+    ],
+    "resolution_dpi": 300,
+    "pixels": [
+      1662,
+      875
+    ]
+  },
+  {
+    "file": "static/images/method.png",
+    "source_page": 4,
+    "crop_points": [
+      106,
+      81,
+      505,
+      284
+    ],
+    "resolution_dpi": 300,
+    "pixels": [
+      1662,
+      845
+    ]
+  },
+  {
+    "file": "static/images/main-results.png",
+    "source_page": 6,
+    "crop_points": [
+      106,
+      121,
+      505,
+      414
+    ],
+    "resolution_dpi": 300,
+    "pixels": [
+      1662,
+      1220
+    ]
+  },
+  {
+    "file": "static/images/scaling-results.png",
+    "source_page": 7,
+    "crop_points": [
+      106,
+      110,
+      505,
+      274
+    ],
+    "resolution_dpi": 300,
+    "pixels": [
+      1662,
+      683
+    ]
+  },
+  {
+    "file": "static/images/ablations.png",
+    "source_page": 7,
+    "crop_points": [
+      106,
+      314,
+      505,
+      389
+    ],
+    "resolution_dpi": 300,
+    "pixels": [
+      1662,
+      312
+    ]
+  },
+  {
+    "file": "static/images/rubric-analysis.png",
+    "source_page": 8,
+    "crop_points": [
+      106,
+      81,
+      505,
+      212
+    ],
+    "resolution_dpi": 300,
+    "pixels": [
+      1662,
+      545
+    ]
+  },
+  {
+    "file": "static/images/case-cognitive.png",
+    "source_page": 14,
+    "figure": 6,
+    "appendix": "C",
+    "crop_points": [
+      116,
+      211,
+      495,
+      440
+    ],
+    "resolution_dpi": 400,
+    "pixels": [
+      2105,
+      1272
+    ]
+  },
+  {
+    "file": "static/images/case-affective.png",
+    "source_page": 14,
+    "figure": 7,
+    "appendix": "C",
+    "crop_points": [
+      116,
+      479,
+      495,
+      707
+    ],
+    "resolution_dpi": 400,
+    "pixels": [
+      2105,
+      1266
+    ]
+  },
+  {
+    "file": "static/images/case-proactive.png",
+    "source_page": 15,
+    "figure": 8,
+    "appendix": "C",
+    "crop_points": [
+      116,
+      280,
+      495,
+      508
+    ],
+    "resolution_dpi": 400,
+    "pixels": [
+      2105,
+      1266
+    ]
+  }
+]
